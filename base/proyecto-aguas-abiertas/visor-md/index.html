@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visor de Manuales - Oro Abierto Swim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-a"></div>
+  <div class="bg-shape bg-shape-b"></div>
+
+  <header class="topbar">
+    <div>
+      <h1>Manuales del Proyecto</h1>
+      <p>Oro Abierto Swim - Piloto Santa Maria del Oro</p>
+    </div>
+    <div class="topbar-actions">
+      <input id="searchInput" type="text" placeholder="Buscar documento..." />
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Documentos</h2>
+      <nav id="docList" class="doc-list"></nav>
+    </aside>
+
+    <section class="content">
+      <div class="content-card">
+        <h2 id="docTitle">Selecciona un documento</h2>
+        <p id="docPath" class="doc-path"></p>
+        <article id="docViewer" class="markdown-body">
+          <p>Selecciona un archivo del menu lateral para visualizarlo.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
